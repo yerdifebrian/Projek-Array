@@ -2,21 +2,17 @@
 #include <stdlib.h>
 
 int main() {
-    int nilai[6] = {10, 20, 30, 40, 50};
-    int n = 5; // jumlah elemen saat ini
-    int posisi = 2; // posisi untuk menyisipkan (indeks dimulai dari 0)
-    int dataBaru = 25;
+    int nilai[5] = {10, 20, 30, 40, 50};
+    int n = 5;
+    int posisi = 2; // hapus elemen di indeks ke-2
 
-    // Geser elemen ke kanan
-    for (int i = n; i > posisi; i--) {
-        nilai[i] = nilai[i - 1];
+    for (int i = posisi; i < n - 1; i++) {
+        nilai[i] = nilai[i + 1];
     }
 
-    // Sisipkan data baru
-    nilai[posisi] = dataBaru;
-    n++;
+    n--; // kurangi jumlah elemen efektif
 
-    printf("Array setelah insert:\n");
+    printf("Array setelah delete:\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", nilai[i]);
     }
