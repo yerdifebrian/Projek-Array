@@ -3,17 +3,13 @@
 
 int main() {
     int nilai[5] = {10, 20, 30, 40, 50};
-    int n = 5;
-    int posisi = 2; // hapus elemen di indeks ke-2
+    int indeks = 3;
+    int nilaiBaru = 99;
 
-    for (int i = posisi; i < n - 1; i++) {
-        nilai[i] = nilai[i + 1];
-    }
+    nilai[indeks] = nilaiBaru;
 
-    n--; // kurangi jumlah elemen efektif
-
-    printf("Array setelah delete:\n");
-    for (int i = 0; i < n; i++) {
+    printf("Array setelah update:\n");
+    for (int i = 0; i < 5; i++) {
         printf("%d ", nilai[i]);
     }
 
